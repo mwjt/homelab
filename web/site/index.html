@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Michał Wójtowicz</title>
+<style>
+:root{
+  color-scheme:light;
+  --bg:#c9ccd1; --panel:#fdfdfc; --ink:#141414; --muted:#55585e;
+  --hi:#ffffff; --lo:#7b7e84; --bar:#1c2f6e; --barink:#ffffff;
+  --link:#0000ee; --visited:#551a8b; --rule:#9a9da3;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#17191d; --panel:#23262b; --ink:#e8e8e6; --muted:#a3a7ae;
+    --hi:#40444b; --lo:#0d0e10; --bar:#3a4f9a; --rule:#4a4e56;
+    --link:#8fb4ff; --visited:#c4a8ff;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#17191d; --panel:#23262b; --ink:#e8e8e6; --muted:#a3a7ae;
+  --hi:#40444b; --lo:#0d0e10; --bar:#3a4f9a; --rule:#4a4e56;
+  --link:#8fb4ff; --visited:#c4a8ff;
+}
+html{background:var(--bg);scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:15px/1.55 Verdana,Tahoma,"DejaVu Sans",sans-serif;
+  padding:28px 12px 48px;
+}
+.win{
+  max-width:600px; margin:0 auto; background:var(--panel);
+  border:2px solid; border-color:var(--hi) var(--lo) var(--lo) var(--hi);
+  box-shadow:1px 1px 0 #000;
+}
+.bar{
+  background:var(--bar); color:var(--barink);
+  font:bold 13px/1 Verdana,Tahoma,sans-serif; padding:6px 8px;
+  display:flex; justify-content:space-between; align-items:center;
+}
+.lang button{
+  font:inherit; color:var(--barink); background:none; border:0; padding:2px 4px;
+  cursor:pointer; opacity:.65; text-decoration:underline;
+}
+.lang button[aria-pressed="true"]{opacity:1; text-decoration:none}
+.lang button:focus-visible{outline:2px solid var(--barink);outline-offset:1px}
+.lang span{opacity:.5}
+.inner{padding:22px 26px 20px}
+h1{
+  font:normal 34px/1.15 Georgia,"Times New Roman",serif;
+  margin:0 0 4px; letter-spacing:-.2px;
+}
+.role{margin:0 0 2px;font-size:16px}
+.where{margin:0;color:var(--muted);font-size:13px}
+hr{
+  border:0; border-top:1px solid var(--lo); border-bottom:1px solid var(--hi);
+  margin:18px 0; height:0;
+}
+p{margin:0 0 12px;max-width:60ch}
+table{border-collapse:collapse;width:100%}
+th{
+  text-align:left; font-weight:normal; color:var(--muted);
+  width:118px; padding:5px 12px 5px 0; vertical-align:top;
+}
+td{padding:5px 0}
+a{color:var(--link)}
+a:visited{color:var(--visited)}
+a:focus-visible{outline:2px solid var(--link);outline-offset:2px}
+.foot{
+  margin:0; max-width:none; font-size:12px; color:var(--muted);
+  display:flex; justify-content:space-between; align-items:center; gap:10px 16px; flex-wrap:wrap;
+}
+.foot .l{display:flex; align-items:center; gap:10px}
+.b88{
+  box-sizing:border-box; width:88px; height:31px; flex:none;
+  display:flex; flex-direction:column; justify-content:center; align-items:center;
+  background:var(--bar); color:var(--barink);
+  border:2px solid; border-color:var(--hi) var(--lo) var(--lo) var(--hi);
+  box-shadow:1px 1px 0 #000; line-height:1;
+}
+.b88 b{font:bold 11px/1 Verdana,Tahoma,sans-serif}
+.b88 i{font:normal 8px/1 Verdana,Tahoma,sans-serif; margin-top:3px; opacity:.85}
+.foot button{
+  font:inherit; color:var(--link); background:none; border:0; padding:0;
+  text-decoration:underline; cursor:pointer;
+}
+.foot button:focus-visible{outline:2px solid var(--link);outline-offset:2px}
+@media (max-width:480px){
+  .inner{padding:18px 16px}
+  h1{font-size:28px}
+  th{width:92px}
+}
+</style>
+</head>
+<body>
+<main class="win">
+  <div class="bar"><span>mwjt.pl</span>
+    <span class="lang"><button type="button" data-l="pl" aria-label="Polski">PL</button><span>|</span><button type="button" data-l="en" aria-label="English">EN</button></span></div>
+  <div class="inner">
+    <h1>Michał Wójtowicz</h1>
+        <p class="where" id="where">Wrocław, Poland</p>
+
+    <hr>
+
+    <table>
+      <tr><th scope="row" data-i="work">At work</th><td data-i="workt"></td></tr>
+      <tr><th scope="row" data-i="out">Outside work</th><td data-i="outt"></td></tr>
+    </table>
+
+    <hr>
+
+    <table>
+      <tr><th scope="row" data-i="mail">Email</th><td><a href="mailto:mwjt33@gmail.com">mwjt33@gmail.com</a></td></tr>
+      <tr><th scope="row">GitHub</th><td><a href="https://github.com/mwjt">github.com/mwjt</a></td></tr>
+      <tr><th scope="row">LinkedIn</th><td><a href="https://www.linkedin.com/in/mwjt">linkedin.com/in/mwjt</a></td></tr>
+    </table>
+
+    <hr>
+
+    <p class="foot"><span class="l"><span class="b88" role="img" aria-label="mwjt.pl"><b>mwjt.pl</b><i>Wrocław, PL</i></span><span>© 2026 mwjt.pl</span></span>
+      <button type="button" id="theme" data-i="theme">Switch theme (light/dark)</button></p>
+  </div>
+</main>
+<script>
+(function(){
+  var T={
+    en:{work:'At work',workt:'Five years in telecom billing. Mostly Oracle databases: building tables and data pipelines, keeping systems in sync, and exposing the data to clients. Recently built an data export engine in Python on PostgreSQL.',
+      out:'Outside work',outt:'Building Eurolegis, a search engine for EU legislation - a learning project in data engineering and ML/LLM.',
+      mail:'Email',theme:'Switch theme (light/dark)',
+      where:function(t){return 'Wrocław, Poland. It’s '+t+' there now.'}},
+    pl:{work:'W pracy',workt:'Pięć lat w billingu telekomunikacyjnym. Głównie bazy Oracle: tworzenie tabel i potoków danych, synchronizacja systemów oraz udostępnianie danych klientom. Ostatnio zbudowałem w Pythonie silnik eksportu danych na PostgreSQL.',
+      out:'W wolnym czasie',outt:'Buduję Eurolegis, wyszukiwarkę prawodawstwa UE - projekt do nauki inżynierii danych oraz ML/LLM.',
+      mail:'E-mail',theme:'Zmień motyw (jasny/ciemny)',
+      where:function(t){return 'Wrocław, Polska. Jest tam teraz '+t+'.'}}
+  };
+  var lang='en', time='';
+  var h=(location.hash||'').replace('#','');
+  if(h==='pl'||h==='en'){lang=h}
+  else if((navigator.language||'').toLowerCase().indexOf('pl')===0){lang='pl'}
+  var el=document.getElementById('where');
+  var f=null;
+  try{f=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Warsaw',hour:'2-digit',minute:'2-digit'})}catch(e){}
+  function paint(){
+    var d=T[lang];
+    document.documentElement.lang=lang;
+    [].forEach.call(document.querySelectorAll('[data-i]'),function(n){n.textContent=d[n.getAttribute('data-i')]});
+    [].forEach.call(document.querySelectorAll('.lang button'),function(b){b.setAttribute('aria-pressed',b.getAttribute('data-l')===lang)});
+    if(f){el.textContent=d.where(time||f.format(new Date()))}
+    else{el.textContent=lang==='pl'?'Wrocław, Polska':'Wrocław, Poland'}
+  }
+  function tick(){if(f){time=f.format(new Date());paint()}}
+  [].forEach.call(document.querySelectorAll('.lang button'),function(b){
+    b.addEventListener('click',function(){lang=b.getAttribute('data-l');paint()});
+  });
+  paint(); setInterval(tick,30000);
+  document.getElementById('theme').addEventListener('click',function(){
+    var r=document.documentElement;
+    var dark=r.getAttribute('data-theme')==='dark' ||
+      (!r.getAttribute('data-theme') && matchMedia('(prefers-color-scheme: dark)').matches);
+    r.setAttribute('data-theme',dark?'light':'dark');
+  });
+})();
+</script>
+</body>
+</html>
